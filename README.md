@@ -19,7 +19,7 @@ Query parameters:
 - show_private=true
 Response:
 
-'''[
+```[
   {
     "id": "d55d3e2395c6ee1ad7ca6c664f9b9144c35940f0",
     "updated_date": "2021-12-22T21:49:39Z",
@@ -40,7 +40,7 @@ Response:
     ]
   },
   {...}
-]'''
+]```
 
 
 ### Tracks API
