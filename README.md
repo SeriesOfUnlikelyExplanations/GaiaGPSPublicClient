@@ -52,6 +52,7 @@ Response:
 This api allows you to get details about a specific track ID. 
 
 https://www.gaiagps.com/api/objects/track/{track-id}/
+
 Query parameters: Unknown
 Response:
 
