@@ -1,0 +1,26 @@
+{
+  "name": "gaiagpspublicclient",
+  "version": "1.0.0",
+  "description": "An unofficial NodeJs client to read tracks from a public GaiaGps profile.",
+  "main": "gaiagps.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeriesOfUnlikelyExplanations/GaiaGPSPublicClient.git"
+  },
+  "keywords": [
+    "gaia",
+    "gps",
+    "public",
+    "gaiagps",
+    "gaiagps.com"
+  ],
+  "author": "Tom Woodard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SeriesOfUnlikelyExplanations/GaiaGPSPublicClient/issues"
+  },
+  "homepage": "https://github.com/SeriesOfUnlikelyExplanations/GaiaGPSPublicClient#readme"
+}

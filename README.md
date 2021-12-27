@@ -1,5 +1,5 @@
 # GaiaGPSPublicClient
-An unofficial NodeJs client to read tracks from a public GaiaGps profile. Getting this from the 
+An unofficial NodeJs client to read tracks from a public GaiaGps profile. 
 
 
 ## API documentation:
@@ -54,6 +54,7 @@ This api allows you to get details about a specific track ID.
 https://www.gaiagps.com/api/objects/track/{track-id}/
 
 Query parameters: Unknown
+
 Response:
 
 ```
@@ -137,6 +138,6 @@ Response:
       }
     }
   ],
-  "id": "d55d3e2395c6ee1ad7ca6c664f9b9144c35940f0"
+  "id": "{track-id}"
 }
 ```
