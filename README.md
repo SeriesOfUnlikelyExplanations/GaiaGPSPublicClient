@@ -1,5 +1,5 @@
 # GaiaGPSPublicClient
-An unofficial NodeJs client to read tracks from a public GaiaGps profile. 
+An unofficial NodeJs client to read tracks from a public GaiaGps profile. This is currently WIP!
 
 
 ## API documentation:
