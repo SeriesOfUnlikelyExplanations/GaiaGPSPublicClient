@@ -111,7 +111,7 @@ Response:
         "comment_count": 0,
         "comments": [],
         "user_photo_count": 0,
-        "latitude": 36.571375292947266,
+        "latitude": 36.571375292947266, #looks like the center lat/long for the map
         "longitude": -105.43613696394767,
         "writable": false
       },
@@ -126,7 +126,7 @@ Response:
               -105.44224, #longitude
               36.584047, #lattitude
               2989.599853515625, #elevation in meters
-              1640194531 # no idea what this is
+              1640194531 # No idea what this is. It seems to increment througout the track - so maybe some kind of track point id?
             ],
             [
               ...
