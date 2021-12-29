@@ -2,13 +2,22 @@
 An unofficial NodeJs client to read tracks from a public GaiaGps profile. This is currently WIP!
 
 
-## API documentation:
+## How to use it:
+myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021'}) - PROFILE_ID can be found using the steps below. The timeframe parameter is optional.
 
+
+
+
+
+## Retrieving  your PROFILE_ID
+https://www.gaiagps.com/profile/?utm_source=header&utm_campaign=profile
+
+## API documentation:
 
 ### Items API:
 This API allows you to get all the tracks (or other items?) for a particular profile. This includes private tracks, but you can filter them out with a query parameter (or by looking at the public element in the JSON response.
 
-https://www.gaiagps.com/api/objects/items/public/{profile-id}/
+https://www.gaiagps.com/api/objects/items/public/{PROFILE_ID}/
 
 Query parameters:
 - sort_key=time_created
@@ -25,7 +34,7 @@ Response:
 ```
 [
   {
-    "id": "{track-id",
+    "id": "{TRACK_ID}",
     "updated_date": "2021-12-22T21:49:39Z",
     "time_created": "2021-12-22T17:35:33Z",
     "last_updated_on_server": "2021-12-27T14:04:10.083",

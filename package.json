@@ -4,7 +4,8 @@
   "description": "An unofficial NodeJs client to read tracks from a public GaiaGps profile.",
   "main": "gaiagps.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "run": "node tests/manualTest.js"
   },
   "repository": {
     "type": "git",
