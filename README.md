@@ -3,6 +3,7 @@ An unofficial NodeJs client to read tracks from a public GaiaGps profile. I don'
 
 
 ## How to use it:
+```
 const myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021'}) - PROFILE_ID can be found using the steps below. The timeframe parameter is optional.
   myTracks.forEach(async (myTrack) => {
     const geoJSON = await myTrack.geoJSON()
@@ -12,6 +13,7 @@ const myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021
     const gpx = await myTrack.kml()
     console.log(kml)
   })
+```
 
 ## Retrieving  your PROFILE_ID
 1. go to https://www.gaiagps.com/profile/?utm_source=header&utm_campaign=profile
