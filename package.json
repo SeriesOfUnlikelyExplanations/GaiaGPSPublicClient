@@ -1,6 +1,6 @@
 {
   "name": "gaiagpspublicclient",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An unofficial NodeJs client to read tracks from a public GaiaGps profile.",
   "main": "index.js",
   "scripts": {
