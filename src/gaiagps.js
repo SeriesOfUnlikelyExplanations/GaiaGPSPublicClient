@@ -5,8 +5,8 @@
  * Licensed under the MIT license.
  **/
  
-const https = require('https'),
-  Qs = require('qs');
+const https = require('https');
+const Qs = require('qs');
 
 apiHost = 'www.gaiagps.com';
 
@@ -40,10 +40,18 @@ class track {
       this[key] = value
     }
   }
-  json() {
-    return handleRequest(this.apiHost, this.trackScope, this.id)
+  async geoJSON() {
+    var response = await handleRequest(this.apiHost, this.trackScope, this.id+'.geoJson')
+    return response
   }
-  
+  async gpx() {
+    var response = await handleRequest(this.apiHost, this.trackScope, this.id+'.gpx')
+    return response
+  }
+  async kml() {
+    var response = await handleRequest(this.apiHost, this.trackScope, this.id+'.kml')
+    return response
+  }
 }
   
 async function handleRequest(host, scope, id, queryParameters = {}, method = 'GET') {
@@ -61,7 +69,6 @@ async function handleRequest(host, scope, id, queryParameters = {}, method = 'GE
   return new Promise(function(resolve, reject) {
     var req = https.request(options, function(res) {
       if (res.statusCode < 200 || res.statusCode >= 300) {
-        console.log(res.headers)
         return reject(new Error('statusCode=' + res.statusCode));
       }
       var body = [];
@@ -72,7 +79,11 @@ async function handleRequest(host, scope, id, queryParameters = {}, method = 'GE
         try {
           body = JSON.parse(Buffer.concat(body).toString());
         } catch(e) {
-          reject(e);
+          try {
+            body = Buffer.concat(body).toString();
+          } catch(e) {
+            reject(e);
+          }
         }
         resolve(body);
       });

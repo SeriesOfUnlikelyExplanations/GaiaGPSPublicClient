@@ -1,17 +1,25 @@
 # GaiaGPSPublicClient
-An unofficial NodeJs client to read tracks from a public GaiaGps profile. This is currently WIP!
+An unofficial NodeJs client to read tracks from a public GaiaGps profile. I don't like putting usernames/passwords in code, so this client doesn't use a username/password since it only gets a users public profile. It should be fully working - please open an issue if you have any questions or run into any problems!
 
 
 ## How to use it:
-myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021'}) - PROFILE_ID can be found using the steps below. The timeframe parameter is optional.
-
-
-
-
+const myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021'}) - PROFILE_ID can be found using the steps below. The timeframe parameter is optional.
+  myTracks.forEach(async (myTrack) => {
+    const geoJSON = await myTrack.geoJSON()
+    console.log(geoJSON)
+    const gpx = await myTrack.gpx()
+    console.log(gpx)
+    const gpx = await myTrack.kml()
+    console.log(kml)
+  })
 
 ## Retrieving  your PROFILE_ID
-https://www.gaiagps.com/profile/?utm_source=header&utm_campaign=profile
+1. go to https://www.gaiagps.com/profile/?utm_source=header&utm_campaign=profile
+1. sign-in, if you haven't already
+1. Click on "Preview Profile" --> "View Sharable Profile"
+1. Your profile ID is part of the url, right after the "public" path - https://www.gaiagps.com/profile/public/{PROFILE_ID}/{PROFILE_NAME}/
 
+ 
 ## API documentation:
 
 ### Items API:
