@@ -4,15 +4,16 @@ An unofficial NodeJs client to read tracks from a public GaiaGps profile. I don'
 
 ## How to use it:
 ```
-const myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021'}) - PROFILE_ID can be found using the steps below. The timeframe parameter is optional.
-  myTracks.forEach(async (myTrack) => {
-    const geoJSON = await myTrack.geoJSON()
-    console.log(geoJSON)
-    const gpx = await myTrack.gpx()
-    console.log(gpx)
-    const gpx = await myTrack.kml()
-    console.log(kml)
-  })
+const myTracks = await gaiaGps({PROFILE_ID}, {start:'12-21-2021',end:'12-29-2021'}) // PROFILE_ID can be found using the steps below. The timeframe parameter is optional.
+
+myTracks.forEach(async (myTrack) => {
+  const geoJSON = await myTrack.geoJSON()
+  console.log(geoJSON)
+  const gpx = await myTrack.gpx()
+  console.log(gpx)
+  const gpx = await myTrack.kml()
+  console.log(kml)
+})
 ```
 
 ## Retrieving  your PROFILE_ID
@@ -106,8 +107,8 @@ Response:
         "distance": 7403.849900964678, #meters
         "total_ascent": 381.5990220811623, #meters
         "total_descent": 268.03825141058996,
-        "stopped_time": 6028.273809194565,
-        "total_time": 15216,
+        "stopped_time": 6028.273809194565, #seconds
+        "total_time": 15216, #seconds
         "average_speed": 0.486583195384114,
         "moving_time": 9187.726190805435,
         "moving_speed": 0.8058413743733503,
