@@ -61,7 +61,7 @@ async function handleRequest(host, scope, id, queryParameters = {}, method = 'GE
   var options = {
     hostname: host,
     port: 443,
-    path: `${scope}/${id}/?${Qs.stringify(queryParameters)}`,
+    path: `${scope}/${id}?${Qs.stringify(queryParameters)}`,
     method: method,
     headers:{'Cache-Control':'no-cache'}
   }
